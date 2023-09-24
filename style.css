@@ -1,0 +1,138 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Gluten", cursive;
+}
+
+*::selection{
+background-color: #6c2781;
+}
+
+:root {
+  --bgcolor: #fff;
+}
+
+body {
+  background: var(--bgcolor);
+  background-attachment: fixed;
+}
+
+text {
+  font-family: "Gluten", cursive;
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.container {
+  position: relative;
+  padding: 0 20px;
+  left: 35%;
+  width: 500px;
+  z-index: 0;
+}
+
+.container-inputTask {
+  display: flex;
+  gap: 1rem;
+}
+
+#inputBox {
+  width: 400px;
+  height: 30px;
+}
+
+.container input:focus {
+  outline: none;
+  font-size: 1rem;
+}
+
+button {
+  color: var(--bgcolor);
+  height: 30px;
+  width: 80px;
+  background-color: #6c2781;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+.tasks-container {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column-reverse;
+
+}
+
+.tasks-container li {
+  background-color: #c6baca;
+  width: 370px;
+  display: flex;
+  margin-top: 20px;
+  gap: 0.5rem;
+  position: relative;
+}
+
+
+.spanText {
+  line-height: 1.3rem;
+  margin: 5px 5px 15px 5px;
+  padding: 10px 5px 20px 5px;
+  display: block;
+ word-wrap: normal;
+ word-break: break-all;
+ color:#6c2781;
+
+}
+
+.tasks-container li>i {
+  color: #6c2781;
+  margin-top: 15px;
+  margin-left: 5px;
+  font-size: 20px;
+}
+
+.tasks-container-buttons {
+  display: flex;
+  flex-direction: row;
+  bottom: 10px;
+  right: 10px;
+  gap: 0.5rem;
+  position: absolute;
+}
+
+.linethrough-task{
+    text-decoration: line-through;
+    color:#6c2781;
+}
+
+
+.inputEditBox{
+  background-color: #c6baca;
+  line-height: 1.3rem;
+  margin: 5px 5px 15px 5px;
+  padding: 10px 5px 20px 5px;
+  display: block;
+ word-wrap: normal;
+ word-break: break-all;
+ outline: none;
+  color:#6c2781;
+
+}
+
+.emptycontainerAlert{
+  display: none;
+}
+
+.emptycontainerAlert.active{
+  background-color: #c6baca;
+  width: 180px;
+  height:25px;
+  border-radius: 25px;
+  position: relative;
+  top: 5px;
+  left:200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
